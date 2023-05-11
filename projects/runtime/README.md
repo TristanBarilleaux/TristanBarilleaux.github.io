@@ -297,12 +297,8 @@ In `background.js`, the `render()` function sets up our scene and the `update()`
 
   **CODE:** store a bitmap in `tree` variable and add it to the background. The below code shows you not only how to do this, but how to set default `x` and `y` values for the bitmap as well.
 
-  ```js
-  tree = draw.bitmap("img/tree.png");
-  tree.x = 0;
-  tree.y = 0;
-  background.addChild(tree);
-  ```
+ 
+  
 
   > **TESTING:**
   > You should now see a tree in your background! Change the values of `tree.x` and `tree.y` so that the tree appears on the ground in front of Halle.
