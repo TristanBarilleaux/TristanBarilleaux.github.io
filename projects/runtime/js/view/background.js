@@ -47,19 +47,31 @@ var background = function (window) {
             moon.scaleY = 1.0;
             background.addChild(moon);
             
-            
+            for(var i = 0; i < 100; i++){
             var circle = draw.circle(10, "white", "LightGray", 2);
             circle.x = canvasWidth * Math.random();
             circle.y = groundY * Math.random();
             background.addChild(circle);
+         } 
             
           
             
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            
-            
+            for (var i = 0; i < 5; ++i){
+                var buildingHeight = 300;
+                var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                building.x = 200 * i;
+                building.y = groundY - buildingHeight;
+                background.addChild(building);
+                buildings.push(building);
+            }
+              
             // TODO 4: Part 1 - Add a tree
-           
+            var tree = draw.bitmap("img/tree.png");
+            tree.x = 750;
+            tree.y = 250;
+            tree.scaleX = 1
+            background.addChild(tree);
             
         } // end of render function - DO NOT DELETE
         
